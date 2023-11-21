@@ -20,13 +20,12 @@ function UserCardInfo() {
     } ;
 
     const isGender = {
-        color: user.gender === 'male' ? 'red' : 'green',
-        backroundColor: 'yellow',
+        color: user.gender ? 'red' : 'green',
     };
 
     return (
         <article className="userCard">
-            <img src="{user.imgSrc}" alt="user.name" />
+            <img src={user.imgSrc} alt="user.name" />
             <p>{user.gender}</p>
             <p>{user.nick}</p>
             <h1 style={isGender}>{user.name}</h1>
